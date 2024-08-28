@@ -1,0 +1,10 @@
+{% extends "food/base.html" %}
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{item.name}}</h1>
+    <h2>{{item.desc}}</h2>
+    <h3>{{item.price}}</h3>
+{% endblock %}

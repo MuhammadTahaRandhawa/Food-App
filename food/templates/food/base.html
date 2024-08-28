@@ -1,0 +1,36 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %}
+    <link rel="stylesheet" href="{% static " food/index.css" %}"> {% endcomment %}
+    {% tailwind_css %}
+    <title>{% block title %}{% endblock  %}</title>
+</head>
+
+<body>
+    <nav class="bg-slate-700">
+        <div class="mx-4 flex justify-between py-2">
+            <a href="#">
+                <h1 class="text-white">FOOD APP</h1>
+            </a>
+
+            <div class="flex space-x-4">
+                <a href="#" class="text-white">Add Item</a>
+                <a href="#" class="text-white">Delte Item</a>
+                <a href="#" class="text-white">Update Item</a>
+            </div>
+        </div>
+    </nav>
+    <div class = "mx-4">
+        {% block body %}{% endblock  %}
+    </div>
+    
+
+</body>
+
+</html>

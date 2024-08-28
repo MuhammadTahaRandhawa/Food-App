@@ -1,0 +1,13 @@
+{% extends "food/base.html" %}
+
+{% block title %}FOOD APP{% endblock  %}
+
+{% block body %}
+    <div class="mx-4">
+        <ol>
+            {% for item in items %}
+            <li> <a href='{% url "food_item_detail" item.id %}'>{{item.id}} -- {{item.name}}</a></li>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock %}
