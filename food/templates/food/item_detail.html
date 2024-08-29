@@ -1,10 +1,22 @@
 {% extends "food/base.html" %}
 {% block title %}
-    {{ item.name }}
+{{ item.name }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{item.name}}</h1>
-    <h2>{{item.desc}}</h2>
-    <h3>{{item.price}}</h3>
+<div class="flex">
+    <img src="{{item.image}}" alt="{{item.name}}">
+
+    <div>
+        <div class="flex justify-between">
+            <h1>{{item.name}}</h1>
+            <h3 class="bg-green-400 p-1 rounded">{{item.price}}</h3>
+        </div>
+
+        <h2>{{item.desc}}</h2>
+    </div>
+
+</div>
+
+
 {% endblock %}
