@@ -1,0 +1,13 @@
+{% extends "food/base.html" %}
+
+{% block title %}ADD ITEM{% endblock %}
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="border-2 rounded-md bg-slate-600 p-1 text-white">Save</button>
+</form>
+
+{% endblock %}
