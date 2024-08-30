@@ -3,6 +3,13 @@
 {% block title %}FOOD APP{% endblock %}
 
 {% block body %}
+{% if messages %}<div>
+    {% for message in messages %}
+    <h2 class = "text-green-400">{{message}}</h2>
+    {% endfor %}
+</div>
+{% endif %}
+
 <div class="mx-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {% for item in items %}
